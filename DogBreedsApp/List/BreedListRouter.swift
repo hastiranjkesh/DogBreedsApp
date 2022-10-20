@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BreedListRouterProtocol {
-    func goToBreedDetails()
+    func goToBreedDetails(_ breedName: String)
 }
 
 final class BreedListRouter: BreedListRouterProtocol {
@@ -18,7 +18,9 @@ final class BreedListRouter: BreedListRouterProtocol {
         self.viewController = viewController
     }
     
-    func goToBreedDetails() {
-        
+    func goToBreedDetails(_ breedName: String) {
+        let breedImagesViewController = BreedImagesViewController(viewModel: BreedImagesViewModel(breedName: breedName,
+                                                                                                  apiManager: ApiManager()))
+        viewController?.navigationController?.pushViewController(breedImagesViewController, animated: true)
     }
 }

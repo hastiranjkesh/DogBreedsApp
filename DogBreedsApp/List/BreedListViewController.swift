@@ -116,6 +116,6 @@ extension BreedListViewController: UITableViewDataSource {
 
 extension BreedListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        router?.goToBreedDetails(viewModel.getBreedName(at: indexPath.row))
     }
 }

@@ -40,7 +40,7 @@ final class BreedListViewModel: BreedListViewModelProtocol {
     
     func getBreedList() {
         guard let url = URL(string: "https://dog.ceo/api/breeds/list") else { return }
-        apiManager.getBreedList(url: url)
+        apiManager.getData(url: url)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: {[weak self] completion in
                 switch completion {
