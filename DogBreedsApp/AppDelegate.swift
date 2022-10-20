@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let viewController = BreedListViewController(viewModel: BreedListViewModel(apiManager: ApiManager()))
+        viewController.router = BreedListRouter(viewController: viewController)
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.navigationBar.prefersLargeTitles = true
         window = UIWindow(frame: UIScreen.main.bounds)

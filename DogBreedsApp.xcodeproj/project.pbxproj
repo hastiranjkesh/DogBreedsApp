@@ -17,6 +17,7 @@
 		2D5229712901588A0041CA15 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229702901588A0041CA15 /* ApiManager.swift */; };
 		2D522974290159190041CA15 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D522973290159190041CA15 /* BreedModel.swift */; };
 		2D52297629015A530041CA15 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297529015A530041CA15 /* BreedListViewModel.swift */; };
+		2D522978290169340041CA15 /* BreedListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D522977290169340041CA15 /* BreedListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2D5229702901588A0041CA15 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		2D522973290159190041CA15 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		2D52297529015A530041CA15 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
+		2D522977290169340041CA15 /* BreedListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				2D5229422901566A0041CA15 /* BreedListViewController.swift */,
 				2D52297529015A530041CA15 /* BreedListViewModel.swift */,
+				2D522977290169340041CA15 /* BreedListRouter.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				2D522974290159190041CA15 /* BreedModel.swift in Sources */,
 				2D52293F2901566A0041CA15 /* AppDelegate.swift in Sources */,
 				2D52297629015A530041CA15 /* BreedListViewModel.swift in Sources */,
+				2D522978290169340041CA15 /* BreedListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

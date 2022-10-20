@@ -10,7 +10,8 @@ import Combine
 
 class BreedListViewController: UIViewController {
     
-    private var viewModel: BreedListViewModelProtocol
+    private let viewModel: BreedListViewModelProtocol
+    var router: BreedListRouterProtocol?
     private var cancellable = Set<AnyCancellable>()
     
     private lazy var tableView: UITableView = {
