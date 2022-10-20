@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2D52293F2901566A0041CA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52293E2901566A0041CA15 /* AppDelegate.swift */; };
-		2D5229432901566A0041CA15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229422901566A0041CA15 /* ViewController.swift */; };
+		2D5229432901566A0041CA15 /* BreedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229422901566A0041CA15 /* BreedListViewController.swift */; };
 		2D5229482901566C0041CA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5229472901566C0041CA15 /* Assets.xcassets */; };
 		2D52294B2901566C0041CA15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5229492901566C0041CA15 /* LaunchScreen.storyboard */; };
 		2D5229562901566C0041CA15 /* DogBreedsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229552901566C0041CA15 /* DogBreedsAppTests.swift */; };
 		2D5229602901566C0041CA15 /* DogBreedsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52295F2901566C0041CA15 /* DogBreedsAppUITests.swift */; };
 		2D5229622901566C0041CA15 /* DogBreedsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229612901566C0041CA15 /* DogBreedsAppUITestsLaunchTests.swift */; };
+		2D5229712901588A0041CA15 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229702901588A0041CA15 /* ApiManager.swift */; };
+		2D522974290159190041CA15 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D522973290159190041CA15 /* BreedModel.swift */; };
+		2D52297629015A530041CA15 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297529015A530041CA15 /* BreedListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		2D52293B2901566A0041CA15 /* DogBreedsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogBreedsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D52293E2901566A0041CA15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D5229422901566A0041CA15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D5229422901566A0041CA15 /* BreedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewController.swift; sourceTree = "<group>"; };
 		2D5229472901566C0041CA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D52294A2901566C0041CA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D52294C2901566C0041CA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		2D52295B2901566C0041CA15 /* DogBreedsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogBreedsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D52295F2901566C0041CA15 /* DogBreedsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedsAppUITests.swift; sourceTree = "<group>"; };
 		2D5229612901566C0041CA15 /* DogBreedsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2D5229702901588A0041CA15 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		2D522973290159190041CA15 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
+		2D52297529015A530041CA15 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,10 @@
 		2D52293D2901566A0041CA15 /* DogBreedsApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D522972290158C90041CA15 /* Models */,
+				2D52296F290158780041CA15 /* ApiManager */,
+				2D52296E290157F70041CA15 /* List */,
 				2D52293E2901566A0041CA15 /* AppDelegate.swift */,
-				2D5229422901566A0041CA15 /* ViewController.swift */,
 				2D5229472901566C0041CA15 /* Assets.xcassets */,
 				2D5229492901566C0041CA15 /* LaunchScreen.storyboard */,
 				2D52294C2901566C0041CA15 /* Info.plist */,
@@ -119,6 +127,31 @@
 				2D5229612901566C0041CA15 /* DogBreedsAppUITestsLaunchTests.swift */,
 			);
 			path = DogBreedsAppUITests;
+			sourceTree = "<group>";
+		};
+		2D52296E290157F70041CA15 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2D5229422901566A0041CA15 /* BreedListViewController.swift */,
+				2D52297529015A530041CA15 /* BreedListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		2D52296F290158780041CA15 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				2D5229702901588A0041CA15 /* ApiManager.swift */,
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		2D522972290158C90041CA15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D522973290159190041CA15 /* BreedModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D5229432901566A0041CA15 /* ViewController.swift in Sources */,
+				2D5229432901566A0041CA15 /* BreedListViewController.swift in Sources */,
+				2D5229712901588A0041CA15 /* ApiManager.swift in Sources */,
+				2D522974290159190041CA15 /* BreedModel.swift in Sources */,
 				2D52293F2901566A0041CA15 /* AppDelegate.swift in Sources */,
+				2D52297629015A530041CA15 /* BreedListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
