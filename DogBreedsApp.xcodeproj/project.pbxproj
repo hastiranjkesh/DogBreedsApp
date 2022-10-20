@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D52293F2901566A0041CA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52293E2901566A0041CA15 /* AppDelegate.swift */; };
-		2D5229412901566A0041CA15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229402901566A0041CA15 /* SceneDelegate.swift */; };
 		2D5229432901566A0041CA15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229422901566A0041CA15 /* ViewController.swift */; };
-		2D5229462901566A0041CA15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5229442901566A0041CA15 /* Main.storyboard */; };
 		2D5229482901566C0041CA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5229472901566C0041CA15 /* Assets.xcassets */; };
 		2D52294B2901566C0041CA15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5229492901566C0041CA15 /* LaunchScreen.storyboard */; };
 		2D5229562901566C0041CA15 /* DogBreedsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229552901566C0041CA15 /* DogBreedsAppTests.swift */; };
@@ -38,9 +36,7 @@
 /* Begin PBXFileReference section */
 		2D52293B2901566A0041CA15 /* DogBreedsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogBreedsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D52293E2901566A0041CA15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D5229402901566A0041CA15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2D5229422901566A0041CA15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2D5229452901566A0041CA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D5229472901566C0041CA15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D52294A2901566C0041CA15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D52294C2901566C0041CA15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,9 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2D52293E2901566A0041CA15 /* AppDelegate.swift */,
-				2D5229402901566A0041CA15 /* SceneDelegate.swift */,
 				2D5229422901566A0041CA15 /* ViewController.swift */,
-				2D5229442901566A0041CA15 /* Main.storyboard */,
 				2D5229472901566C0041CA15 /* Assets.xcassets */,
 				2D5229492901566C0041CA15 /* LaunchScreen.storyboard */,
 				2D52294C2901566C0041CA15 /* Info.plist */,
@@ -233,7 +227,6 @@
 			files = (
 				2D52294B2901566C0041CA15 /* LaunchScreen.storyboard in Resources */,
 				2D5229482901566C0041CA15 /* Assets.xcassets in Resources */,
-				2D5229462901566A0041CA15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +253,6 @@
 			files = (
 				2D5229432901566A0041CA15 /* ViewController.swift in Sources */,
 				2D52293F2901566A0041CA15 /* AppDelegate.swift in Sources */,
-				2D5229412901566A0041CA15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +289,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2D5229442901566A0041CA15 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2D5229452901566A0041CA15 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2D5229492901566C0041CA15 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +425,6 @@
 				INFOPLIST_FILE = DogBreedsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +451,6 @@
 				INFOPLIST_FILE = DogBreedsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
