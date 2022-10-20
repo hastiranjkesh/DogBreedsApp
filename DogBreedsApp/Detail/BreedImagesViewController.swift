@@ -11,6 +11,7 @@ import Combine
 final class BreedImagesViewController: UIViewController {
     
     private let viewModel: BreedImagesViewModelProtocol
+    var router: BreedImagesRouterProtocol?
     private var cancellable = Set<AnyCancellable>()
     
     private lazy var collectionView: UICollectionView = {
@@ -115,7 +116,10 @@ extension BreedImagesViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension BreedImagesViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.addToFavorite(indexPath.row)
+        router?.goToFavorites(viewModel.breedName, image: viewModel.getBreedImagePath(at: indexPath.row))
+    }
 }
 
 // MARK: -

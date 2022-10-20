@@ -57,8 +57,8 @@ final class BreedImageCollectionViewCell: UICollectionViewCell {
         ])
         
         NSLayoutConstraint.activate([
-            likeButton.heightAnchor.constraint(equalToConstant: 56),
-            likeButton.widthAnchor.constraint(equalToConstant: 56),
+            likeButton.heightAnchor.constraint(equalToConstant: 46),
+            likeButton.widthAnchor.constraint(equalToConstant: 46),
             likeButton.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -8),
             likeButton.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -8)
         ])

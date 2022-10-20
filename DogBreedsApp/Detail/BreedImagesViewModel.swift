@@ -13,11 +13,13 @@ protocol BreedImagesViewModelProtocol {
     // Because properties declared inside a protocol cannot have a wrapper
     var errorPublisher: Published<Error?>.Publisher { get }
     var loadingFinishedPublisher: Published<Bool>.Publisher { get }
+    var breedName: String { get }
     
     func getBreedAllImages()
     func getBreedImagePath(at index: Int) -> String
     func getControllerTitle() -> String
     func numberOfItemsInSection() -> Int
+    func addToFavorite(_ index: Int)
 }
 
 final class BreedImagesViewModel: BreedImagesViewModelProtocol {
@@ -30,12 +32,14 @@ final class BreedImagesViewModel: BreedImagesViewModelProtocol {
     
     private var cancellable = Set<AnyCancellable>()
     private var apiManager: ApiManagerProtocol
+    private var dataProvider: RealmDataProviderProtocol
     var allImages: [String]?
-    private let breedName: String
+    let breedName: String
     
-    init(breedName: String, apiManager: ApiManagerProtocol) {
+    init(breedName: String, apiManager: ApiManagerProtocol, dataProvider: RealmDataProviderProtocol) {
         self.breedName = breedName
         self.apiManager = apiManager
+        self.dataProvider = dataProvider
     }
     
     func getBreedAllImages() {
@@ -66,5 +70,12 @@ final class BreedImagesViewModel: BreedImagesViewModelProtocol {
     
     func numberOfItemsInSection() -> Int {
         allImages?.count ?? 0
+    }
+    
+    func addToFavorite(_ index: Int) {
+        let entity = FavoriteEntity()
+        entity.name = breedName
+        entity.image = getBreedImagePath(at: index)
+        dataProvider.add(entity, update: true)
     }
 }

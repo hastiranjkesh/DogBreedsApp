@@ -20,7 +20,8 @@ final class BreedListRouter: BreedListRouterProtocol {
     
     func goToBreedDetails(_ breedName: String) {
         let breedImagesViewController = BreedImagesViewController(viewModel: BreedImagesViewModel(breedName: breedName,
-                                                                                                  apiManager: ApiManager()))
+                                                                                                  apiManager: ApiManager(), dataProvider: RealmDataProvider()))
+        breedImagesViewController.router = BreedImagesRouter(viewController: breedImagesViewController)
         viewController?.navigationController?.pushViewController(breedImagesViewController, animated: true)
     }
 }
