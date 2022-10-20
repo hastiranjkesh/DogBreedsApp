@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BreedImageCollectionViewCell: UICollectionViewCell {
+final class BreedImageCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "BreedImageCollectionViewCellId"
     
@@ -20,8 +20,13 @@ class BreedImageCollectionViewCell: UICollectionViewCell {
     }()
     
     private lazy var likeButton: UIButton = {
-        let btn = UIButton(frame: .zero)
-        btn.setImage(UIImage(systemName: "search"), for: .normal)
+        let btn = UIButton(type: .system)
+        let boldConfig = UIImage.SymbolConfiguration(weight: .bold)
+        let favImage = UIImage(systemName: "heart", withConfiguration: boldConfig)
+        btn.setImage(favImage, for: .normal)
+        btn.contentVerticalAlignment = .fill
+        btn.contentHorizontalAlignment = .fill
+        btn.tintColor = .systemRed
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -38,7 +43,7 @@ class BreedImageCollectionViewCell: UICollectionViewCell {
     
     private func addSubviews() {
         addSubview(imageView)
-        addSubview(likeButton)
+        imageView.addSubview(likeButton)
         
         addConstraints()
     }
@@ -54,8 +59,8 @@ class BreedImageCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             likeButton.heightAnchor.constraint(equalToConstant: 56),
             likeButton.widthAnchor.constraint(equalToConstant: 56),
-            likeButton.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -16),
-            likeButton.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -16)
+            likeButton.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -8),
+            likeButton.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -8)
         ])
     }
     
