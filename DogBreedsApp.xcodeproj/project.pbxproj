@@ -22,6 +22,11 @@
 		2D52297D29016E010041CA15 /* BreedImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297C29016E010041CA15 /* BreedImagesViewModel.swift */; };
 		2D52297F290171DD0041CA15 /* BreedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297E290171DD0041CA15 /* BreedImageCollectionViewCell.swift */; };
 		2D522982290172E50041CA15 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D522981290172E50041CA15 /* UIImageViewExtension.swift */; };
+		2D5229842901AD750041CA15 /* BreedImagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229832901AD750041CA15 /* BreedImagesRouter.swift */; };
+		2D5229872901B01B0041CA15 /* RealmDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229862901B01B0041CA15 /* RealmDataProvider.swift */; };
+		2D5229892901B0550041CA15 /* FavoriteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5229882901B0550041CA15 /* FavoriteEntity.swift */; };
+		2D52298C2901B1FC0041CA15 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2D52298B2901B1FC0041CA15 /* RealmSwift */; };
+		2D52298E2901B73E0041CA15 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52298D2901B73E0041CA15 /* FavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,10 @@
 		2D52297C29016E010041CA15 /* BreedImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesViewModel.swift; sourceTree = "<group>"; };
 		2D52297E290171DD0041CA15 /* BreedImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D522981290172E50041CA15 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		2D5229832901AD750041CA15 /* BreedImagesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesRouter.swift; sourceTree = "<group>"; };
+		2D5229862901B01B0041CA15 /* RealmDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataProvider.swift; sourceTree = "<group>"; };
+		2D5229882901B0550041CA15 /* FavoriteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntity.swift; sourceTree = "<group>"; };
+		2D52298D2901B73E0041CA15 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D52298C2901B1FC0041CA15 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +121,7 @@
 		2D52293D2901566A0041CA15 /* DogBreedsApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D5229852901AFFA0041CA15 /* Favorites */,
 				2D522972290158C90041CA15 /* Models */,
 				2D52296F290158780041CA15 /* ApiManager */,
 				2D52296E290157F70041CA15 /* List */,
@@ -173,6 +184,7 @@
 				2D52297A29016DAA0041CA15 /* BreedImagesViewController.swift */,
 				2D52297C29016E010041CA15 /* BreedImagesViewModel.swift */,
 				2D52297E290171DD0041CA15 /* BreedImageCollectionViewCell.swift */,
+				2D5229832901AD750041CA15 /* BreedImagesRouter.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -181,8 +193,18 @@
 			isa = PBXGroup;
 			children = (
 				2D522981290172E50041CA15 /* UIImageViewExtension.swift */,
+				2D5229862901B01B0041CA15 /* RealmDataProvider.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		2D5229852901AFFA0041CA15 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2D5229882901B0550041CA15 /* FavoriteEntity.swift */,
+				2D52298D2901B73E0041CA15 /* FavoriteViewModel.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +223,9 @@
 			dependencies = (
 			);
 			name = DogBreedsApp;
+			packageProductDependencies = (
+				2D52298B2901B1FC0041CA15 /* RealmSwift */,
+			);
 			productName = DogBreedsApp;
 			productReference = 2D52293B2901566A0041CA15 /* DogBreedsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -273,6 +298,9 @@
 				Base,
 			);
 			mainGroup = 2D522932290156690041CA15;
+			packageReferences = (
+				2D52298A2901B1FC0041CA15 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 2D52293C2901566A0041CA15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,13 +343,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5229872901B01B0041CA15 /* RealmDataProvider.swift in Sources */,
 				2D522982290172E50041CA15 /* UIImageViewExtension.swift in Sources */,
 				2D52297F290171DD0041CA15 /* BreedImageCollectionViewCell.swift in Sources */,
 				2D5229432901566A0041CA15 /* BreedListViewController.swift in Sources */,
+				2D5229892901B0550041CA15 /* FavoriteEntity.swift in Sources */,
 				2D52297D29016E010041CA15 /* BreedImagesViewModel.swift in Sources */,
+				2D52298E2901B73E0041CA15 /* FavoriteViewModel.swift in Sources */,
 				2D5229712901588A0041CA15 /* ApiManager.swift in Sources */,
 				2D52297B29016DAA0041CA15 /* BreedImagesViewController.swift in Sources */,
 				2D522974290159190041CA15 /* BreedModel.swift in Sources */,
+				2D5229842901AD750041CA15 /* BreedImagesRouter.swift in Sources */,
 				2D52293F2901566A0041CA15 /* AppDelegate.swift in Sources */,
 				2D52297629015A530041CA15 /* BreedListViewModel.swift in Sources */,
 				2D522978290169340041CA15 /* BreedListRouter.swift in Sources */,
@@ -650,6 +682,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D52298A2901B1FC0041CA15 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D52298B2901B1FC0041CA15 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D52298A2901B1FC0041CA15 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D522933290156690041CA15 /* Project object */;
 }
