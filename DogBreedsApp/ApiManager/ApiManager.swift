@@ -9,14 +9,14 @@ import Foundation
 import Combine
 
 protocol ApiManagerProtocol {
-    func getBreedList(url: URL) -> AnyPublisher<Breed, Error>
+    func getData(url: URL) -> AnyPublisher<Breed, Error>
 }
 
 final class ApiManager: ApiManagerProtocol {
     let session = URLSession.shared
     
-    func getBreedList(url: URL) -> AnyPublisher<Breed, Error> {
-        return session.dataTaskPublisher(for: url)
+    func getData(url: URL) -> AnyPublisher<Breed, Error> {
+        return URLSession.shared.dataTaskPublisher(for: url)
             .map { $0.data }
             .receive(on: DispatchQueue.main)
             .decode(type: Breed.self, decoder: JSONDecoder())

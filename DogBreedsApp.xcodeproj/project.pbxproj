@@ -18,6 +18,10 @@
 		2D522974290159190041CA15 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D522973290159190041CA15 /* BreedModel.swift */; };
 		2D52297629015A530041CA15 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297529015A530041CA15 /* BreedListViewModel.swift */; };
 		2D522978290169340041CA15 /* BreedListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D522977290169340041CA15 /* BreedListRouter.swift */; };
+		2D52297B29016DAA0041CA15 /* BreedImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297A29016DAA0041CA15 /* BreedImagesViewController.swift */; };
+		2D52297D29016E010041CA15 /* BreedImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297C29016E010041CA15 /* BreedImagesViewModel.swift */; };
+		2D52297F290171DD0041CA15 /* BreedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297E290171DD0041CA15 /* BreedImageCollectionViewCell.swift */; };
+		2D522982290172E50041CA15 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D522981290172E50041CA15 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		2D522973290159190041CA15 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		2D52297529015A530041CA15 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
 		2D522977290169340041CA15 /* BreedListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListRouter.swift; sourceTree = "<group>"; };
+		2D52297A29016DAA0041CA15 /* BreedImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesViewController.swift; sourceTree = "<group>"; };
+		2D52297C29016E010041CA15 /* BreedImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesViewModel.swift; sourceTree = "<group>"; };
+		2D52297E290171DD0041CA15 /* BreedImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D522981290172E50041CA15 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,8 @@
 				2D522972290158C90041CA15 /* Models */,
 				2D52296F290158780041CA15 /* ApiManager */,
 				2D52296E290157F70041CA15 /* List */,
+				2D52297929016D760041CA15 /* Detail */,
+				2D522980290172D30041CA15 /* Helper */,
 				2D52293E2901566A0041CA15 /* AppDelegate.swift */,
 				2D5229472901566C0041CA15 /* Assets.xcassets */,
 				2D5229492901566C0041CA15 /* LaunchScreen.storyboard */,
@@ -155,6 +165,24 @@
 				2D522973290159190041CA15 /* BreedModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2D52297929016D760041CA15 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2D52297A29016DAA0041CA15 /* BreedImagesViewController.swift */,
+				2D52297C29016E010041CA15 /* BreedImagesViewModel.swift */,
+				2D52297E290171DD0041CA15 /* BreedImageCollectionViewCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2D522980290172D30041CA15 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2D522981290172E50041CA15 /* UIImageViewExtension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,8 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D522982290172E50041CA15 /* UIImageViewExtension.swift in Sources */,
+				2D52297F290171DD0041CA15 /* BreedImageCollectionViewCell.swift in Sources */,
 				2D5229432901566A0041CA15 /* BreedListViewController.swift in Sources */,
+				2D52297D29016E010041CA15 /* BreedImagesViewModel.swift in Sources */,
 				2D5229712901588A0041CA15 /* ApiManager.swift in Sources */,
+				2D52297B29016DAA0041CA15 /* BreedImagesViewController.swift in Sources */,
 				2D522974290159190041CA15 /* BreedModel.swift in Sources */,
 				2D52293F2901566A0041CA15 /* AppDelegate.swift in Sources */,
 				2D52297629015A530041CA15 /* BreedListViewModel.swift in Sources */,
