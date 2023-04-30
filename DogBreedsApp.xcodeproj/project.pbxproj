@@ -22,7 +22,6 @@
 		2D52297D29016E010041CA15 /* BreedImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297C29016E010041CA15 /* BreedImagesViewModel.swift */; };
 		2D52297F290171DD0041CA15 /* BreedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D52297E290171DD0041CA15 /* BreedImageCollectionViewCell.swift */; };
 		2D522982290172E50041CA15 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D522981290172E50041CA15 /* UIImageViewExtension.swift */; };
-		2D52298C2901B1FC0041CA15 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2D52298B2901B1FC0041CA15 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D52298C2901B1FC0041CA15 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +202,6 @@
 			);
 			name = DogBreedsApp;
 			packageProductDependencies = (
-				2D52298B2901B1FC0041CA15 /* RealmSwift */,
 			);
 			productName = DogBreedsApp;
 			productReference = 2D52293B2901566A0041CA15 /* DogBreedsApp.app */;
@@ -279,7 +276,6 @@
 			);
 			mainGroup = 2D522932290156690041CA15;
 			packageReferences = (
-				2D52298A2901B1FC0041CA15 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 2D52293C2901566A0041CA15 /* Products */;
 			projectDirPath = "";
@@ -658,25 +654,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2D52298A2901B1FC0041CA15 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2D52298B2901B1FC0041CA15 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2D52298A2901B1FC0041CA15 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D522933290156690041CA15 /* Project object */;
 }
