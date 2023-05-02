@@ -1,6 +1,6 @@
 # DogBreedsApp
 
-This Xcode project is a Swift application that uses the MVVM architecture pattern and the Combine framework. 
+This Xcode project is a Swift application that uses the MVVM architecture pattern, UIKit and the Combine framework. 
 It is designed to provide a simple example of how to structure an iOS application using MVVM and how to utilize the Combine framework 
 to manage asynchronous data flows.
 
